@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  /* Primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* Neutral */
+  --Very-dark-blue-main: hsl(217, 54%, 11%); /* main BG */
+  --Very-dark-blue-card: hsl(216, 50%, 16%); /* card BG */
+  --Very-dark-blue-line: hsl(215, 32%, 27%); /* line */
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125x;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 54%, 11%);
+}
+.card {
+  margin: 2rem;
+  padding: 1.5rem;
+  max-width: 360px;
+  display: flex;
+  gap: 1.5rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  box-shadow: 2px 2px 30px hsl(217, 54%, 11%);
+  background-color: hsl(216, 50%, 16%);
+}
+.card h1 {
+  display: flex;
+  color: hsl(0, 0%, 100%);
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 500600;
+}
+.card p {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.left-row,
+.right-row {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 15px;
+}
+p.ethereum {
+  color: hsl(178, 100%, 50%) !important;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  padding: 0;
+}
+.avatar {
+  width: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 1px;
+}
+.row p {
+  font-size: 16px;
+}
+.profile p span {
+  color: hsl(0, 0%, 100%);
+}
+.profile p span:hover,
+.card h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+.profile {
+  gap: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+.profile p {
+  display: flex;
+  gap: 0.25rem;
+}
+.left-row p {
+  font-weight: 600;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: hsl(178, 100%, 50%);
+  border-radius: 0.5rem;
+}
+.container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.icon {
+  color: white;
+  position: absolute;
+  width: 45px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .icon {
+  opacity: 1;
+  cursor: pointer;
+}
